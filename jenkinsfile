@@ -1,15 +1,10 @@
-pipeliene{
+pipeliene {
  agent any
-	stages{
+	stages {
 	stage ('build stage') {
-	
-	 steps{ 
-	 Withmaven('Maven : maven') {
-	 sh ' mvn clean compile'
+	steps { 
+	bat ('mvn clean install')
 	 }
 	 }
 	}
-	
-	
 	}
-}
